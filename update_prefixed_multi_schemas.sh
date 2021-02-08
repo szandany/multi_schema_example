@@ -2,8 +2,9 @@
 
 # Dynamic list of schema names
 # To read schema names from the SQL filenames, run the following:
-# LBSCHEMANAMES=`ls SQLFILES/ | grep -o "_.*.sql" | sed "s/_//g" | sed -e "s/\.sql//g"` 
+# LBSCHEMANAMES=$(ls SQLFILES/ | grep -o "_.*.sql" | sed "s/_//g" | sed -e "s/\.sql//g")
 # LBSCHEMANAMES=$(echo $LBSCHEMANAMES | awk '{for (i=1;i<=NF;i++) if (!LBSCHEMANAMES[$i]++) printf("%s%s",$i,FS)}{printf("\n")}')
+
 # Fixed list of schema names
 LBSCHEMANAMES="ATEST BTEST CTEST"
 
